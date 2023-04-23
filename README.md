@@ -1,4 +1,4 @@
-This repository contains machine learning Python code and ZirconISAClassifier software used in the manuscript "A machine learning method for distinguishing detrital zircon provenance " (Zhong et al., 2023, Contributions to Mineralogy and Petrology). All software by the authors is released under an [MIT open-source license](LICENSE).
+This repository contains machine learning Python code and ZirconISAClassifier software used in the manuscript "A machine learning method for distinguishing detrital zircon provenance " (Zhong et al., 2023, Contributions to Mineralogy and Petrology). 
 
 CONTENTS:
 
