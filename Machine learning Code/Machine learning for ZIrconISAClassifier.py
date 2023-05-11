@@ -35,7 +35,6 @@ y_val = np.loadtxt('D:/XXXX/y_val.txt')
 x_train = np.log10(x_train)
 
 # Under-sampling (“TomekLinks”) to get a balanced database
-xro_train, yro_train = SMOTE().fit_resample(x_train, y_train)
 xru_train, yru_train = TomekLinks().fit_resample(x_train, y_train)
 
 # Standardization
