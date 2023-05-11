@@ -11,7 +11,7 @@ from sklearn.metrics import confusion_matrix, f1_score, roc_curve, auc, roc_auc_
 from sklearn.pipeline import Pipeline
 from joblib import dump, load
 from sklearn.preprocessing import StandardScaler, PowerTransf
-'''Python code for predicting the source rocks of detrital zircons using trace elements.
+''' Python code for predicting the source rocks of detrital zircons using trace elements.
 
 This code can be used to reproduce the results shown in Zhong et al.(2023) published in Contributions to Mineralogy and
 Petrology titled "A machine learning method for distinguishing detrital zircon provenance". It contains trained 
@@ -19,7 +19,7 @@ algorithms for Support Vector Machine (SVM), Random Forest (RF), and Multilayer 
 to predict the source rocks of users' zircons. Please see the article for more details.
 '''
 
-"""Data processing
+""" Data processing
 """
 # IMPORTANT: replace the file path in the line below with your file path
 # The whole dataset was randomly divided into a training and a test set at a ratio of 8:2 but the procedure was not shown here
@@ -31,7 +31,7 @@ y_train = np.loadtxt('D:/XXXX/y_train.txt')
 x_val1 = np.loadtxt('D:/XXXX/x_val.txt')
 y_val = np.loadtxt('D:/XXXX/y_val.txt')
 
-#Applying a natural logarithmic scale for zircon trace element data
+# Applying a natural logarithmic scale for zircon trace element data
 x_train = np.log10(x_train)
 
 # Under-sampling (“TomekLinks”) to get a balanced database
@@ -42,7 +42,7 @@ scaleru = StandardScaler().fit(xru_train)  # method='box-cox'
 xru_train = scaleru.transform(xru_train)
 
 
-"""Machine learning training
+""" Machine learning training
 """
 # SVM method training and the selected hyperparameter
 svm = SVC(kernel='rbf',
