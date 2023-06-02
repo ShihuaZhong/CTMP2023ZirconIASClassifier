@@ -33,7 +33,7 @@ y_val = np.loadtxt('D:/XXXX/y_val.txt')
 
 # Applying a natural logarithmic scale for zircon trace element data
 x_train = np.log10(x_train)
-k_val1 = np.log10(x_val1)
+x_val1 = np.log10(x_val1)
 
 # Under-sampling (“TomekLinks”) to get a balanced database
 xru_train, yru_train = TomekLinks().fit_resample(x_train, y_train)
